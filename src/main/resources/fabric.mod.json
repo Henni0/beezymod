@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "beezymod",
+	"version": "${version}",
+	"name": "Beezymod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/beezymod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"beezymod.com.Beezymod"
+		],
+		"client": [
+			"beezymod.com.client.BeezymodClient"
+		]
+	},
+	"mixins": [
+		"beezymod.mixins.json",
+		{
+			"config": "beezymod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
