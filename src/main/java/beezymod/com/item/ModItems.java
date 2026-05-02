@@ -37,10 +37,13 @@ public final class ModItems {
 
     private static final ResourceKey<CreativeModeTab> COMBAT_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB,
             Identifier.withDefaultNamespace("combat"));
+    private static final ResourceKey<CreativeModeTab> TOOLS_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB,
+            Identifier.withDefaultNamespace("tools_and_utilities"));
 
     public static void initialize() {
         CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.accept(EXAMPLE_ITEM));
         CreativeModeTabEvents.modifyOutputEvent(COMBAT_TAB).register(output -> output.accept(OBSIDIAN_SWORD));
+        CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.accept(OBSIDIAN_PICKAXE));
     }
 
     private ModItems() {
